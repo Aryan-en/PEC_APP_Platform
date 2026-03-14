@@ -1,0 +1,28 @@
+﻿node.exe : Loaded Prisma config 
+from prisma.config.ts.
+At C:\Program 
+Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSp 
+   ecified: (Loaded Prisma c...ism  
+  a.config.ts.:String) [], Remote   
+ Exception
+    + FullyQualifiedErrorId : Nativ 
+   eCommandError
+ 
+
+Prisma config detected, skipping 
+environment variable loading.
+Prisma schema loaded from prisma\schema.prisma
+Error: 
+Cannot find module 'D:\PEC_APP\PEC-P
+ortal\backend\pec-backend\node_modul
+es\@prisma\client\runtime\query_engi
+ne_bg.postgresql.wasm-base64.js'
+Require stack:
+- D:\PEC_APP\PEC-Portal\backend\pec-
+backend\node_modules\prisma\build\in
+dex.js
+
+

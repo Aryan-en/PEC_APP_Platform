@@ -1,0 +1,9 @@
+users
+roles
+permissions
+user_roles
+students
+faculty
+courses
+enrollments
+attendance

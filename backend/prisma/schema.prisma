@@ -1,0 +1,150 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  FACULTY
+  ADMIN
+  SUPER_ADMIN
+}
+
+model Enrollment {
+  id String @id @default(uuid())
+
+  studentId String
+  courseId  String
+
+  student Student @relation(fields: [studentId], references: [id])
+  course  Course  @relation(fields: [courseId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, courseId])
+}
+
+model User {
+  id               String  @id @default(uuid())
+  email            String  @unique
+  password         String
+  role             Role
+  isActive         Boolean @default(true)
+  refreshTokenHash String?
+
+  student Student?
+  faculty Faculty?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Department {
+  id   String @id @default(uuid())
+  name String
+  code String @unique
+
+  students Student[]
+  faculty  Faculty[]
+  courses  Course[]
+
+  createdAt DateTime @default(now())
+}
+
+model Student {
+  id         String @id @default(uuid())
+  rollNumber String @unique
+  name       String
+  batch      Int
+  semester   Int
+
+  userId       String @unique
+  departmentId String
+
+  user       User       @relation(fields: [userId], references: [id])
+  department Department @relation(fields: [departmentId], references: [id])
+
+  enrollments Enrollment[]
+  attendance  Attendance[]
+  grades      Grade[]
+
+  createdAt DateTime @default(now())
+}
+
+model Faculty {
+  id         String @id @default(uuid())
+  employeeId String @unique
+  name       String
+
+  userId       String @unique
+  departmentId String
+
+  user       User       @relation(fields: [userId], references: [id])
+  department Department @relation(fields: [departmentId], references: [id])
+
+  courses Course[]
+
+  createdAt DateTime @default(now())
+}
+
+model Course {
+  id       String @id @default(uuid())
+  code     String
+  name     String
+  semester Int
+  credits  Int
+
+  departmentId String
+  facultyId    String?
+
+  department Department @relation(fields: [departmentId], references: [id])
+  faculty    Faculty?   @relation(fields: [facultyId], references: [id])
+
+  enrollments Enrollment[]
+  attendance  Attendance[]
+  grades      Grade[]
+
+  createdAt DateTime @default(now())
+}
+
+model Attendance {
+  id String @id @default(uuid())
+
+  date   DateTime
+  status AttendanceStatus
+
+  studentId String
+  courseId  String
+
+  student Student @relation(fields: [studentId], references: [id])
+  course  Course  @relation(fields: [courseId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, courseId, date])
+}
+
+model Grade {
+  id String @id @default(uuid())
+
+  grade String
+
+  studentId String
+  courseId  String
+
+  student Student @relation(fields: [studentId], references: [id])
+  course  Course  @relation(fields: [courseId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, courseId])
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+}

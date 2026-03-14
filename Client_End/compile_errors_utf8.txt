@@ -1,0 +1,238 @@
+﻿src/App.tsx(2,23): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/attendance/QRAttendanceGenerator.tsx(2,92): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/attendance/QRAttendanceScanner.tsx(2,76): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/chat/AvatarUpload.tsx(2,32): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/chat/ChatInput.tsx(2,63): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/chat/CreateGroupDialog.tsx(2,56): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/layout/Header.tsx(2,23): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/timetable/FacultyScheduleManager.tsx(2,81): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/components/timetable/FacultyScheduleManager.tsx(88,21): error TS2304: Cannot find name 'writeBatch'.
+src/components/ui/GradualBlur.tsx(1,27): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/config/firebase.ts(1,10): error TS2395: Individual declarations in merged declaration 'collection' must be all exported or all local.
+src/config/firebase.ts(1,22): error TS2395: Individual declarations in merged declaration 'doc' must be all exported or all local.
+src/config/firebase.ts(1,27): error TS2395: Individual declarations in merged declaration 'getDoc' must be all exported or all local.
+src/config/firebase.ts(1,35): error TS2395: Individual declarations in merged declaration 'getDocs' must be all exported or all local.
+src/config/firebase.ts(1,44): error TS2395: Individual declarations in merged declaration 'addDoc' must be all exported or all local.
+src/config/firebase.ts(1,52): error TS2395: Individual declarations in merged declaration 'setDoc' must be all exported or all local.
+src/config/firebase.ts(1,60): error TS2395: Individual declarations in merged declaration 'updateDoc' must be all exported or all local.
+src/config/firebase.ts(1,71): error TS2395: Individual declarations in merged declaration 'deleteDoc' must be all exported or all local.
+src/config/firebase.ts(1,82): error TS2395: Individual declarations in merged declaration 'query' must be all exported or all local.
+src/config/firebase.ts(1,89): error TS2395: Individual declarations in merged declaration 'where' must be all exported or all local.
+src/config/firebase.ts(1,96): error TS2395: Individual declarations in merged declaration 'limit' must be all exported or all local.
+src/config/firebase.ts(1,103): error TS2395: Individual declarations in merged declaration 'orderBy' must be all exported or all local.
+src/config/firebase.ts(1,112): error TS2395: Individual declarations in merged declaration 'startAfter' must be all exported or all local.
+src/config/firebase.ts(1,124): error TS2395: Individual declarations in merged declaration 'serverTimestamp' must be all exported or all local.
+src/config/firebase.ts(1,141): error TS2395: Individual declarations in merged declaration 'increment' must be all exported or all local.
+src/config/firebase.ts(1,152): error TS2395: Individual declarations in merged declaration 'getFirestore' must be all exported or all local.
+src/config/firebase.ts(1,172): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/config/firebase.ts(39,14): error TS2395: Individual declarations in merged declaration 'getFirestore' must be all exported or all local.
+src/config/firebase.ts(68,14): error TS2395: Individual declarations in merged declaration 'collection' must be all exported or all local.
+src/config/firebase.ts(69,14): error TS2395: Individual declarations in merged declaration 'doc' must be all exported or all local.
+src/config/firebase.ts(70,14): error TS2395: Individual declarations in merged declaration 'getDoc' must be all exported or all local.
+src/config/firebase.ts(71,14): error TS2395: Individual declarations in merged declaration 'getDocs' must be all exported or all local.
+src/config/firebase.ts(72,14): error TS2395: Individual declarations in merged declaration 'addDoc' must be all exported or all local.
+src/config/firebase.ts(73,14): error TS2395: Individual declarations in merged declaration 'setDoc' must be all exported or all local.
+src/config/firebase.ts(74,14): error TS2395: Individual declarations in merged declaration 'updateDoc' must be all exported or all local.
+src/config/firebase.ts(75,14): error TS2395: Individual declarations in merged declaration 'deleteDoc' must be all exported or all local.
+src/config/firebase.ts(76,14): error TS2395: Individual declarations in merged declaration 'query' must be all exported or all local.
+src/config/firebase.ts(77,14): error TS2395: Individual declarations in merged declaration 'where' must be all exported or all local.
+src/config/firebase.ts(78,14): error TS2395: Individual declarations in merged declaration 'limit' must be all exported or all local.
+src/config/firebase.ts(79,14): error TS2395: Individual declarations in merged declaration 'orderBy' must be all exported or all local.
+src/config/firebase.ts(80,14): error TS2395: Individual declarations in merged declaration 'startAfter' must be all exported or all local.
+src/config/firebase.ts(81,14): error TS2395: Individual declarations in merged declaration 'serverTimestamp' must be all exported or all local.
+src/config/firebase.ts(82,14): error TS2395: Individual declarations in merged declaration 'increment' must be all exported or all local.
+src/hooks/useChatMessages.ts(1,23): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/hooks/useCollegeSettings.ts(2,29): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/hooks/useOrganizationData.ts(2,56): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/hooks/useOrganizationData.ts(11,41): error TS2304: Cannot find name 'DocumentData'.
+src/hooks/usePermissions.ts(27,59): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/hooks/usePermissions.ts(34,22): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/hooks/usePermissions.ts(35,26): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/hooks/usePermissions.ts(36,26): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/hooks/usePermissions.ts(37,44): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/hooks/usePermissions.ts(38,30): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/hooks/usePermissions.ts(39,33): error TS2345: Argument of type 'CurrentUser' is not assignable to parameter of type 'User'.
+  Type 'CurrentUser' is missing the following properties from type 'User': id, name
+src/lib/accessControl.ts(2,63): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/chatManagement-extended.service.ts(2,76): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/chatManagement.service.ts(2,75): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/chatManagement.service.ts(21,14): error TS2304: Cannot find name 'arrayUnion'.
+src/lib/chatManagement.service.ts(32,14): error TS2304: Cannot find name 'arrayRemove'.
+src/lib/chatManagement.service.ts(33,13): error TS2304: Cannot find name 'arrayRemove'.
+src/lib/chatManagement.service.ts(41,13): error TS2304: Cannot find name 'arrayUnion'.
+src/lib/chatManagement.service.ts(49,13): error TS2304: Cannot find name 'arrayRemove'.
+src/lib/chatRooms.service.ts(2,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/cloudinary.service.ts(47,22): error TS2304: Cannot find name 'ref'.
+src/lib/cloudinary.service.ts(47,26): error TS2304: Cannot find name 'storage'.
+src/lib/cloudinary.service.ts(48,9): error TS2304: Cannot find name 'uploadBytes'.
+src/lib/cloudinary.service.ts(49,10): error TS2304: Cannot find name 'getDownloadURL'.
+src/lib/messages-extended.service.ts(2,88): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/messages-extended.service.ts(71,18): error TS2304: Cannot find name 'arrayUnion'.
+src/lib/messages-extended.service.ts(75,18): error TS2304: Cannot find name 'arrayRemove'.
+src/lib/messages.service.ts(2,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/messages.service.ts(33,10): error TS2304: Cannot find name 'onSnapshot'.
+src/lib/messages.service.ts(147,18): error TS2304: Cannot find name 'arrayUnion'.
+src/lib/messages.service.ts(151,18): error TS2304: Cannot find name 'arrayRemove'.
+src/lib/orgHelpers.ts(2,42): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/pdfExport.ts(1,21): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/lib/permissions.ts(36,12): error TS2339: Property 'permissions' does not exist on type 'User'.
+src/lib/permissions.ts(37,17): error TS2339: Property 'permissions' does not exist on type 'User'.
+src/lib/rolePermissions.ts(115,9): error TS2353: Object literal may only specify known properties, and 'canSwitchOrganizations' does not exist in type 'RolePermissions'.
+src/pages/About.tsx(1,35): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/Approvals.tsx(1,21): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/CanteenManager.tsx(2,96): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/CanteenManager.tsx(67,31): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/admin/CanteenManager.tsx(73,30): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/admin/CollegeSettings.tsx(2,61): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/HostelAdmin.tsx(2,84): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/HostelAdmin.tsx(57,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/admin/HostelAdmin.tsx(97,20): error TS2304: Cannot find name 'arrayUnion'.
+src/pages/admin/OrganizationDetail.tsx(1,28): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/PaymentSettings.tsx(2,54): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/PlacementSettings.tsx(1,21): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/SystemConfig.tsx(1,23): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/admin/SystemLogs.tsx(2,23): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/ApplyInstitution.tsx(2,48): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/ApplyInstitution.tsx(3,66): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Assignments.tsx(2,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Assignments.tsx(224,18): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Assignments.tsx(245,18): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Assignments.tsx(306,20): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Attendance.tsx(2,100): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Attendance.tsx(232,17): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Attendance.tsx(285,32): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Attendance.tsx(286,32): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Attendance.tsx(293,18): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Auth.tsx(2,113): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/Auth.tsx(3,54): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/CampusMap.tsx(2,86): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Chat.tsx(1,23): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Clubs.tsx(2,79): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Clubs.tsx(90,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/Clubs.tsx(113,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/Clubs.tsx(217,20): error TS2304: Cannot find name 'arrayUnion'.
+src/pages/Clubs.tsx(241,20): error TS2304: Cannot find name 'arrayRemove'.
+src/pages/college/DepartmentDetail.tsx(2,64): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/college/Departments.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/college/Departments.tsx(3,97): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/college/Faculty.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/college/Faculty.tsx(3,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/college/FinancialReport.tsx(1,28): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/CourseMaterials.tsx(2,100): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Courses.tsx(2,103): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/AdminDashboard.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/dashboards/AdminDashboard.tsx(3,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/CollegeAdminDashboard.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/dashboards/CollegeAdminDashboard.tsx(3,64): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/FacultyDashboard.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/dashboards/FacultyDashboard.tsx(3,64): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/PlacementOfficerDashboard.tsx(2,63): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/PlacementOfficerDashboard.tsx(52,23): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/PlacementOfficerDashboard.tsx(56,29): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/PlacementOfficerDashboard.tsx(60,23): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/PlacementOfficerDashboard.tsx(65,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/PlacementOfficerDashboard.tsx(73,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/RecruiterDashboard.tsx(2,47): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/RecruiterDashboard.tsx(57,23): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/RecruiterDashboard.tsx(66,23): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/dashboards/SuperAdminDashboard.tsx(2,71): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/SuperAdminDashboard.tsx(107,47): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/dashboards/SuperAdminDashboard.tsx(122,47): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Examinations.tsx(2,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Finance.tsx(2,103): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/HostelIssues.tsx(2,92): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/HostelIssues.tsx(87,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/HostelIssues.tsx(171,20): error TS2304: Cannot find name 'arrayUnion'.
+src/pages/LeaveManagement.tsx(1,10): error TS2300: Duplicate identifier 'db'.
+src/pages/LeaveManagement.tsx(2,75): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/LeaveManagement.tsx(7,10): error TS2300: Duplicate identifier 'db'.
+src/pages/LeaveManagement.tsx(40,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/LeaveManagement.tsx(60,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/LeaveManagement.tsx(89,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/Library.tsx(1,10): error TS2300: Duplicate identifier 'db'.
+src/pages/Library.tsx(2,86): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Library.tsx(7,10): error TS2300: Duplicate identifier 'db'.
+src/pages/Library.tsx(49,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/Library.tsx(74,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/MyApplications.tsx(2,64): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/NightCanteen.tsx(2,81): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/NightCanteen.tsx(77,27): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/Onboarding.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/Onboarding.tsx(3,100): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Onboarding.tsx(179,72): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Organizations.tsx(2,89): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Organizations.tsx(176,7): error TS2322: Type '"college" | "university" | "institute"' is not assignable to type '"college"'.
+  Type '"university"' is not assignable to type '"college"'.
+src/pages/Organizations.tsx(181,7): error TS2322: Type '"active" | "suspended" | "pending"' is not assignable to type '"pending"'.
+  Type '"active"' is not assignable to type '"pending"'.
+src/pages/Organizations.tsx(542,24): error TS2322: Type '"default" | "status-verified" | "status-pending" | "status-error"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | "success"'.
+  Type '"status-verified"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | "success"'.
+src/pages/PaymentDetail.tsx(2,57): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/PaymentDetail.tsx(538,30): error TS2304: Cannot find name 'Input'.
+src/pages/placement/CandidateDiscovery.tsx(2,72): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/CareerPortal.tsx(2,80): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/InterviewSchedule.tsx(2,56): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/InterviewSchedule.tsx(83,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/Jobs.tsx(2,128): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/Jobs.tsx(63,13): error TS2304: Cannot find name 'Timestamp'.
+src/pages/placement/Jobs.tsx(143,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/Jobs.tsx(166,26): error TS2345: Argument of type 'Set<unknown>' is not assignable to parameter of type 'SetStateAction<Set<string>>'.
+  Type 'Set<unknown>' is not assignable to type 'Set<string>'.
+    Type 'unknown' is not assignable to type 'string'.
+src/pages/placement/Jobs.tsx(181,19): error TS2304: Cannot find name 'Timestamp'.
+src/pages/placement/Jobs.tsx(269,27): error TS2339: Property 'displayName' does not exist on type 'CurrentUser'.
+src/pages/placement/MyPlacementDashboard.tsx(2,72): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/MyPlacementDashboard.tsx(98,7): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/MyPlacementDashboard.tsx(150,7): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/MyPlacementDashboard.tsx(170,7): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/MyPlacementDashboard.tsx(184,7): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/PlacementApplications.tsx(2,108): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/PlacementApplications.tsx(101,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/PlacementDrives.tsx(2,96): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/PlacementDrives.tsx(58,9): error TS2304: Cannot find name 'Timestamp'.
+src/pages/placement/PlacementDrives.tsx(91,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/PlacementDrives.tsx(103,15): error TS2304: Cannot find name 'Timestamp'.
+src/pages/placement/PlacementProfile.tsx(2,65): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/Recruiters.tsx(2,112): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/placement/Recruiters.tsx(91,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/Recruiters.tsx(105,23): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/Recruiters.tsx(117,24): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/placement/StudentReadiness.tsx(2,65): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Placements.tsx(2,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Placements.tsx(184,19): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Placements.tsx(213,19): error TS2304: Cannot find name 'Timestamp'.
+src/pages/Privacy.tsx(1,28): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/PublicStudentProfile.tsx(2,29): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/ResumeBuilderIvyLeague.tsx(1,22): error TS2300: Duplicate identifier 'doc'.
+src/pages/ResumeBuilderIvyLeague.tsx(1,27): error TS2300: Duplicate identifier 'getDoc'.
+src/pages/ResumeBuilderIvyLeague.tsx(1,41): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/ResumeBuilderIvyLeague.tsx(37,19): error TS2300: Duplicate identifier 'doc'.
+src/pages/ResumeBuilderIvyLeague.tsx(37,24): error TS2300: Duplicate identifier 'getDoc'.
+src/pages/RoleSelection.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/RoleSelection.tsx(3,57): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/RoomBooking.tsx(1,10): error TS2300: Duplicate identifier 'db'.
+src/pages/RoomBooking.tsx(2,86): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/RoomBooking.tsx(7,10): error TS2300: Duplicate identifier 'db'.
+src/pages/RoomBooking.tsx(52,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/RoomBooking.tsx(74,25): error TS2304: Cannot find name 'onSnapshot'.
+src/pages/Search.tsx(2,60): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Settings.tsx(2,40): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Settings.tsx(513,43): error TS2304: Cannot find name 'deleteField'.
+src/pages/Settings.tsx(590,45): error TS2304: Cannot find name 'deleteField'.
+src/pages/Students.tsx(2,111): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/SystemHealth.tsx(281,12): error TS2322: Type '"status-verified" | "status-pending" | "status-error"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | "success"'.
+  Type '"status-verified"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | "success"'.
+src/pages/Timetable.tsx(2,103): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/UserDetail.tsx(2,64): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Users.tsx(2,40): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/pages/Users.tsx(3,102): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.
+src/pages/Users.tsx(154,21): error TS2304: Cannot find name 'writeBatch'.
+src/pages/Users.tsx(310,23): error TS2304: Cannot find name 'writeBatch'.
+src/utils/orgRouting.tsx(2,36): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/utils/orgRouting.tsx(3,29): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.

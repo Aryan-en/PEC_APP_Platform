@@ -1,0 +1,134 @@
+# Extract Pure Frontend from PEC App (Remove Firebase/Backend)
+
+## Problem & Context
+
+The PEC App project is a Vite + React + TypeScript campus ERP with **Firebase deeply embedded as the data layer and auth system across 68+ files**. Every page directly imports Firestore/Auth functions and makes inline CRUD calls. The goal is to rip out all Firebase, MongoDB, and backend dependencies to produce a **pure frontend shell** that can later connect to your Prisma/Postgres/Redis/Next.js backend.
+
+> [!CAUTION]
+> **This is a very large-scale refactoring task.** Firebase is not just used for auth — it IS the entire data layer. Every single page (Dashboard, Courses, Attendance, Finance, Placements, etc.) directly calls `getDocs`, `addDoc`, `updateDoc`, `deleteDoc` from Firestore inline. There is no abstraction/service layer in between. This means:
+> - After removing Firebase, **all data-fetching and data-mutation logic in every page will be replaced with mock/placeholder data**
+> - Pages will render with **static mock data** and the UI will be fully intact
+> - You will need to later wire up your Next.js API routes in place of the mock data
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Key decision: What should replace Firebase data operations?**
+> 
+> Since Firebase is the ENTIRE data layer (not just auth), removing it means every page that fetches/writes data needs a replacement strategy. I propose:
+> 
+> 1. **Replace [config/firebase.ts](file:///d:/PEC_APP/omnifow/src/config/firebase.ts)** with a no-op module (exports empty stubs)
+> 2. **Replace [hooks/useAuth.ts](file:///d:/PEC_APP/omnifow/src/hooks/useAuth.ts)** with a mock that returns a hardcoded demo user (so all pages render)
+> 3. **Replace all Firestore calls in pages** with mock/static data so the UI renders identically
+> 4. **Replace [OrganizationContext](file:///d:/PEC_APP/omnifow/src/contexts/OrganizationContext.tsx#7-12)** with a mock organization
+> 5. **Remove** `firebase`, `firebase-admin`, `mongodb`, `mongoose` from [package.json](file:///d:/PEC_APP/omnifow/package.json)
+> 6. **Delete** the `scripts/` folder (18 Firebase seed scripts) and [firestore.rules](file:///d:/PEC_APP/omnifow/firestore.rules)
+> 
+> The UI/components/styling will be 100% preserved. Only the data source changes from "live Firebase" to "static mock data."
+
+## Proposed Changes
+
+### 1. Config Layer
+
+#### [MODIFY] [firebase.ts](file:///d:/PEC_APP/omnifow/src/config/firebase.ts)
+Replace with a stub module that exports mock objects (`auth`, `db`, `storage`) so existing imports don't break. All Firebase SDK imports will be removed.
+
+---
+
+### 2. Auth Layer
+
+#### [MODIFY] [useAuth.ts](file:///d:/PEC_APP/omnifow/src/hooks/useAuth.ts)
+Replace Firebase Auth listener with a mock that returns a hardcoded demo user:
+- `uid: 'demo-user'`
+- `role: 'student'` (configurable)
+- `isAuthenticated: true`
+- `permissions`: full permissions object
+- No Firebase imports at all
+
+#### [MODIFY] [OrganizationContext.tsx](file:///d:/PEC_APP/omnifow/src/contexts/OrganizationContext.tsx)
+Replace Firestore-based org fetching with mock organization data.
+
+---
+
+### 3. Components with Firebase
+
+#### [MODIFY] [ProtectedRoute.tsx](file:///d:/PEC_APP/omnifow/src/components/ProtectedRoute.tsx)
+Replace Firebase auth check with mock auth (always authenticated).
+
+#### [MODIFY] [OrgScopeRedirect.tsx](file:///d:/PEC_APP/omnifow/src/components/OrgScopeRedirect.tsx)
+Replace Firestore lookups with mock data.
+
+#### [MODIFY] [Header.tsx](file:///d:/PEC_APP/omnifow/src/components/layout/Header.tsx)
+Replace Firebase `signOut` with a no-op or redirect.
+
+#### [MODIFY] [FacultyScheduleManager.tsx](file:///d:/PEC_APP/omnifow/src/components/timetable/FacultyScheduleManager.tsx)
+Replace Firestore CRUD with mock data.
+
+#### [MODIFY] Attendance components ([QRAttendanceScanner.tsx](file:///d:/PEC_APP/omnifow/src/components/attendance/QRAttendanceScanner.tsx), [QRAttendanceGenerator.tsx](file:///d:/PEC_APP/omnifow/src/components/attendance/QRAttendanceGenerator.tsx))
+Replace Firestore calls with mock data.
+
+---
+
+### 4. All Pages (~50 files)
+
+Every page in `src/pages/` that imports from `@/config/firebase` or `firebase/*` will be modified:
+- Remove all `firebase/*` imports
+- Remove all `@/config/firebase` imports
+- Replace all `getDocs`/`getDoc`/`addDoc`/`updateDoc`/`deleteDoc`/`collection`/`query`/`where`/`onSnapshot` calls with mock/static data
+- Preserve ALL UI rendering, components, styling, animations exactly as-is
+- State management (`useState`, `useEffect`) will be preserved but load mock data
+
+**Files affected (representative list):**
+- Auth: `AuthEnhanced.tsx`, `Auth.tsx`, `RoleSelection.tsx`, `Onboarding.tsx`
+- Core: `Dashboard.tsx`, `StudentProfile.tsx`, `Courses.tsx`, `Timetable.tsx`
+- Finance: `Finance.tsx`, `PaymentDetail.tsx`
+- Placements: `Jobs.tsx`, `PlacementDrives.tsx`, `PlacementApplications.tsx`, + 10 more
+- College Admin: `Departments.tsx`, `Faculty.tsx`, `DepartmentDetail.tsx`
+- Dashboards: All 7 role-based dashboards
+- And ~20 more pages
+
+---
+
+### 5. Lib/Utils
+
+#### [MODIFY] Service files in `src/lib/` that use Firebase
+- `chatManagement.service.ts`, `chatRooms.service.ts`, `messages.service.ts` — Replace Firestore with mock data
+- `accessControl.ts` — Remove Firebase auth checks
+
+#### [MODIFY] [orgRouting.tsx](file:///d:/PEC_APP/omnifow/src/utils/orgRouting.tsx)
+Replace Firestore lookups with mock data.
+
+#### [DELETE] [seedPlacementData.ts](file:///d:/PEC_APP/omnifow/src/utils/seedPlacementData.ts)
+Firebase-specific seeding utility.
+
+---
+
+### 6. Project Configuration
+
+#### [MODIFY] [package.json](file:///d:/PEC_APP/omnifow/package.json)
+Remove dependencies: `firebase`, `firebase-admin`, `mongodb`, `mongoose`
+Remove scripts: `api`, `dev:all`, `db:init`
+
+#### [DELETE] [firestore.rules](file:///d:/PEC_APP/omnifow/firestore.rules)
+Firebase security rules — no longer needed.
+
+#### [DELETE] All files in `scripts/` directory (18 Firebase seed scripts)
+
+#### [MODIFY] [.env.example](file:///d:/PEC_APP/omnifow/.env.example)
+Remove any Firebase-related env vars (currently none, but ensure cleanliness).
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to verify the project compiles without errors after all changes
+- Run `npm run lint` to check for any import/reference errors
+
+### Manual Verification
+1. Run `npm run dev` and open the app in browser
+2. Verify landing page loads correctly with all styling/animations
+3. Navigate to `/auth` — should show the auth page UI (login form visible, no Firebase errors in console)
+4. Navigate to a dashboard route — should render with mock data
+5. Check browser console for zero Firebase-related errors
+6. Verify no `firebase` imports remain: `grep -r "firebase" src/`

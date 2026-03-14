@@ -1,0 +1,15 @@
+rollNumber,name,email,departmentCode,batch,semester
+21CSE001,Aryan Singh,aryan.singh@pec.edu,CSE,2021,6
+21CSE002,Priya Sharma,priya.sharma@pec.edu,CSE,2021,6
+21CSE003,Rahul Verma,rahul.verma@pec.edu,CSE,2021,6
+21ECE001,Sneha Gupta,sneha.gupta@pec.edu,ECE,2021,6
+21ECE002,Aditya Kumar,aditya.kumar@pec.edu,ECE,2021,6
+21EE001,Meera Patel,meera.patel@pec.edu,EE,2021,6
+22CSE001,Rohan Joshi,rohan.joshi@pec.edu,CSE,2022,4
+22CSE002,Kavya Reddy,kavya.reddy@pec.edu,CSE,2022,4
+22ECE001,Vikash Yadav,vikash.yadav@pec.edu,ECE,2022,4
+22ME001,Ananya Das,ananya.das@pec.edu,ME,2022,4
+23CSE001,Ishaan Malhotra,ishaan.malhotra@pec.edu,CSE,2023,2
+23CSE002,Riya Nair,riya.nair@pec.edu,CSE,2023,2
+23CE001,Karan Bhatia,karan.bhatia@pec.edu,CE,2023,2
+23EE001,Pooja Saxena,pooja.saxena@pec.edu,EE,2023,2

@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: pec_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: pec_db
+      POSTGRES_USER: pec_admin
+      POSTGRES_PASSWORD: strongpassword123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7
+    container_name: pec_redis
+    restart: always
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: pec_backend
+    restart: always
+    env_file:
+      - ../backend/.env
+    environment:
+      DATABASE_URL: postgresql://pec_admin:strongpassword123@postgres:5432/pec_db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  postgres_data:
+  redis_data:

@@ -1,0 +1,15 @@
+code,name,semester,credits,departmentCode
+CS101,Introduction to Programming,1,4,CSE
+CS201,Data Structures & Algorithms,3,4,CSE
+CS301,Database Management Systems,5,4,CSE
+CS302,Operating Systems,5,4,CSE
+CS401,Machine Learning,7,3,CSE
+EC101,Basic Electronics,1,4,ECE
+EC201,Signals & Systems,3,4,ECE
+EC301,Digital Communication,5,3,ECE
+EE101,Electrical Circuits,1,4,EE
+EE201,Power Systems,3,4,EE
+ME101,Engineering Mechanics,1,4,ME
+ME201,Thermodynamics,3,4,ME
+CE101,Engineering Drawing,1,3,CE
+CE201,Structural Analysis,3,4,CE
