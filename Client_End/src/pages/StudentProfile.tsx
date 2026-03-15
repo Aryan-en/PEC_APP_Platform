@@ -31,7 +31,7 @@ const STUDENT = {
   fullName: 'Arjun Singh',
   initials: 'AS',
   rollNumber: '25106012',
-  branch: 'B Tech : Chemical Engineering',
+  branch: 'B Tech : CSE (DS)',
   degree: 'B Tech',
   semester: '2',
   email: 'aryansingh.bt25cseds@pec.edu.in',

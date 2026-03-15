@@ -69,7 +69,7 @@ interface Course {
 const DEMO_COURSES: Course[] = [
   {
     id: 'c1', code: 'CH201', name: 'Engineering Thermodynamics',
-    department: 'Chemical Engineering', semester: 2, credits: 4,
+    department: 'CSE (DS)', semester: 2, credits: 4,
     facultyName: 'Dr. R. K. Sharma', maxStudents: 60, enrolledStudents: 47,
     description: 'Fundamental laws of thermodynamics and their applications to chemical processes including heat engines, refrigeration cycles and chemical equilibrium.',
     schedule: [
@@ -80,7 +80,7 @@ const DEMO_COURSES: Course[] = [
   },
   {
     id: 'c2', code: 'CH202', name: 'Fluid Mechanics',
-    department: 'Chemical Engineering', semester: 2, credits: 4,
+    department: 'CSE (DS)', semester: 2, credits: 4,
     facultyName: 'Dr. S. P. Verma', maxStudents: 60, enrolledStudents: 52,
     description: 'Principles of fluid statics, kinematics and dynamics with applications in chemical and process engineering.',
     schedule: [
@@ -90,7 +90,7 @@ const DEMO_COURSES: Course[] = [
   },
   {
     id: 'c3', code: 'CH203', name: 'Material & Energy Balances',
-    department: 'Chemical Engineering', semester: 2, credits: 3,
+    department: 'CSE (DS)', semester: 2, credits: 3,
     facultyName: 'Dr. A. Kumar', maxStudents: 60, enrolledStudents: 55,
     description: 'Systematic approach to stoichiometry and energy analysis for chemical processes; reactive and non-reactive systems.',
     schedule: [
@@ -131,7 +131,7 @@ const DEMO_COURSES: Course[] = [
   },
   {
     id: 'c7', code: 'CH204', name: 'Introductory Chemistry Lab',
-    department: 'Chemical Engineering', semester: 2, credits: 2,
+    department: 'CSE (DS)', semester: 2, credits: 2,
     facultyName: 'Dr. R. K. Sharma', maxStudents: 30, enrolledStudents: 28,
     description: 'Hands-on laboratory experiments covering titrations, gravimetric analysis, synthesis and analytical techniques.',
     schedule: [
@@ -140,7 +140,7 @@ const DEMO_COURSES: Course[] = [
   },
   {
     id: 'c8', code: 'CH205', name: 'Chemical Process Safety',
-    department: 'Chemical Engineering', semester: 2, credits: 2,
+    department: 'CSE (DS)', semester: 2, credits: 2,
     facultyName: 'Prof. V. Rao', maxStudents: 60, enrolledStudents: 35,
     description: 'Hazard identification, risk assessment, HAZOP studies and safety management in chemical plants.',
     schedule: [
@@ -167,7 +167,7 @@ const getCourseImage = (dept: string, name: string) => {
   if (nameLower.includes('safety')) return 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80';
 
   const deptImages: Record<string, string> = {
-    'Chemical Engineering': 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80',
+    'CSE (DS)': 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80',
     'Computer Science': 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80',
     'Electronics': 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
     'Mechanical': 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=800&q=80',

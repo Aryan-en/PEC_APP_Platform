@@ -30,7 +30,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import QRAttendanceScanner from '@/components/attendance/QRAttendanceScanner';
 import type {
   StudentProfile,
   Course,
@@ -67,7 +66,6 @@ export function StudentDashboard() {
   const [loading, setLoading] = useState(true);
   const [firstName, setFirstName] = useState('Student');
   const [profileData, setProfileData] = useState<StudentProfile | null>(null);
-  const [showQRScanner, setShowQRScanner] = useState(false);
 
   const [semesterGrades, setSemesterGrades] = useState<{ semester: string, sgpa: number }[]>([]);
   const [stats, setStats] = useState<StudentStats>({
@@ -207,14 +205,6 @@ export function StudentDashboard() {
             {profileData?.enrollmentNumber || 'Student'} • {profileData?.department || 'Department'} • Semester {profileData?.semester || '-'}
           </p>
         </div>
-        <Button
-          onClick={() => setShowQRScanner(true)}
-          variant="gradient"
-          className="w-full md:w-auto"
-        >
-          <Camera className="w-4 h-4 mr-2" />
-          Mark Attendance
-        </Button>
       </motion.div>
 
       {/* Stats Cards */}
@@ -633,24 +623,7 @@ export function StudentDashboard() {
         </div>
       </motion.section>
 
-      {/* QR Attendance Scanner Modal */}
-      <Dialog open={showQRScanner} onOpenChange={setShowQRScanner}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle>Scan QR Code</DialogTitle>
-          </DialogHeader>
-          <QRAttendanceScanner
-            onSuccess={() => {
-              setShowQRScanner(false);
-              // Refresh attendance data
-              if (mockUser && profileData) {
-                fetchStudentStats(mockUser.uid, profileData);
-              }
-            }}
-            onClose={() => setShowQRScanner(false)}
-          />
-        </DialogContent>
-      </Dialog>
+
     </div>
   );
 }
